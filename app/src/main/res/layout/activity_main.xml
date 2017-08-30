@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10sp"
+    tools:context="com.example.zack.androidviewsandlayouts.MainActivity">
+
+    <LinearLayout
+        app:theme="@style/AppThemeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:text="@string/name" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etInputValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="1"
+        android:hint="Please input value"
+        android:inputType="number"
+        android:lines="2" />
+
+
+    <Button
+        android:id="@+id/btnUpdateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update text view (Using Listener)" />
+
+    <Button
+        android:id="@+id/btnUpdateTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="updateTextView"
+        android:text="Update text view (Using OnClick)" />
+
+    <TextView
+        android:id="@+id/tvDisplayValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvFirst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First" />
+
+        <TextView
+            android:gravity="end"
+            android:id="@+id/tvSecond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvFirst"
+            android:text="Second" />
+
+        <TextView
+
+            android:id="@+id/tvThird"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvFirst"
+            android:layout_toRightOf="@+id/tvFirst"
+            android:text="Third" />
+
+    </RelativeLayout>
+
+</LinearLayout>
